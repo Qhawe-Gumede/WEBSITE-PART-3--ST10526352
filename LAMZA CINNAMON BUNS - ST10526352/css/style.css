@@ -1,0 +1,973 @@
+/* =====================================================
+   LAMZA'S CINNAMON BUNS & DESSERTS
+   COMPLETE WEBSITE STYLESHEET
+   ===================================================== */
+
+
+/* =====================================================
+   1. GENERAL SETTINGS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   2. NAVIGATION MENU
+   ===================================================== */
+
+.header {
+    width: 100%;
+    padding: 18px 7%;
+    background-color: #fff8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: #8b4513;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation a {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #d2691e;
+}
+
+.order-button {
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #d2691e;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   3. HERO SECTION
+   ===================================================== */
+
+.hero {
+    min-height: 600px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../images/cinnamon-rolls.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   4. CALL TO ACTION BUTTONS
+   ===================================================== */
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    padding: 14px 28px;
+    margin: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #d2691e;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   5. INTRODUCTION / WELCOME SECTION
+   ===================================================== */
+
+.introduction {
+    width: 90%;
+    max-width: 950px;
+    margin: 70px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.introduction h2 {
+    color: #8b4513;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   6. SECTION HEADINGS
+   ===================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    color: #8b4513;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   7. FEATURED PRODUCTS
+   ===================================================== */
+
+.products {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.product-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.product-controls label {
+    display: grid;
+    gap: 6px;
+    color: #5f4637;
+    font-weight: 600;
+}
+
+.product-controls input,
+.product-controls select {
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 1px solid #c9b6a7;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font: inherit;
+}
+
+.product-controls input {
+    min-width: min(280px, 80vw);
+}
+
+.product-results {
+    margin: 0 0 18px;
+    color: #666;
+}
+
+.product-empty {
+    grid-column: 1 / -1;
+    color: #666;
+}
+
+.cart-panel {
+    margin: 0 0 28px;
+    padding: 20px;
+    border: 1px solid #dfcdbd;
+    border-radius: 6px;
+    background: #fffaf5;
+}
+
+.cart-header,
+.cart-footer,
+.cart-item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cart-header h2 {
+    margin: 0;
+    color: #8b4513;
+    font-size: 22px;
+}
+
+#cart-count {
+    color: #666;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eadfd6;
+}
+
+.cart-item-details {
+    flex: 1 1 220px;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-button,
+.cart-remove {
+    min-width: 34px;
+    min-height: 34px;
+    border: 1px solid #c9b6a7;
+    border-radius: 4px;
+    background: #fff;
+    color: #5f3820;
+    cursor: pointer;
+    font: inherit;
+}
+
+.cart-remove {
+    padding: 5px 9px;
+}
+
+.cart-footer {
+    padding-top: 16px;
+    font-size: 18px;
+}
+
+.cart-empty,
+.cart-feedback {
+    margin: 12px 0 0;
+    color: #666;
+}
+
+.cart-checkout {
+    margin-top: 16px;
+}
+
+.cart-checkout:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 22px;
+    text-align: center;
+}
+
+.product-info h3 {
+    color: #8b4513;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.price {
+    display: block;
+    color: #d2691e;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .product-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .product-controls input,
+    .product-controls select {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   8. PRODUCT BUTTON
+   ===================================================== */
+
+.product-button {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: #d2691e;
+}
+
+
+/* =====================================================
+   9. WHY CHOOSE US
+   ===================================================== */
+
+.why-us {
+    background-color: #f3e1ce;
+    padding: 70px 7%;
+    margin-top: 70px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feature {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+}
+
+
+/* =====================================================
+   10. ABOUT SECTION
+   ===================================================== */
+
+.about-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-content h2 {
+    color: #8b4513;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   11. MENU PAGE
+   ===================================================== */
+
+.products-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    color: #8b4513;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.product-item p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #d2691e;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   12. GALLERY
+   ===================================================== */
+
+.gallery-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   13. CUSTOMER REVIEWS
+   ===================================================== */
+
+.reviews {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+    color: #e6a700;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.review p {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    color: #8b4513;
+}
+
+
+/* =====================================================
+   14. CONTACT PAGE
+   ===================================================== */
+
+.contact-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: #f3e1ce;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   15. FORM
+   ===================================================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #8b4513;
+}
+
+.submit-button {
+    border: none;
+    cursor: pointer;
+    background-color: #8b4513;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #d2691e;
+}
+
+
+/* =====================================================
+   16. FINAL CALL TO ACTION
+   ===================================================== */
+
+.final-cta {
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    margin-top: 70px;
+}
+
+.final-cta h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.final-cta .cta-btn {
+    background-color: white;
+    color: #8b4513;
+}
+
+.final-cta .cta-btn:hover {
+    background-color: #f3e1ce;
+}
+
+
+/* =====================================================
+   17. FOOTER
+   ===================================================== */
+
+.footer {
+    background-color: #3b2415;
+    color: white;
+    padding: 50px 7% 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer h3 {
+    color: #f3c49b;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.footer a {
+    color: #ddd;
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: #f3c49b;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: #ccc;
+}
+
+
+/* =====================================================
+   18. PAGE BANNER
+   ===================================================== */
+
+.page-banner {
+    min-height: 300px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../images/cinnamon-rolls.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.page-banner h1 {
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   19. MOBILE NAVIGATION / RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .product-grid,
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .order-button {
+        padding: 10px 18px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .introduction h2,
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .product-grid,
+    .menu-grid,
+    .features,
+    .gallery-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .page-banner h1 {
+        font-size: 34px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cta-btn {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+}
